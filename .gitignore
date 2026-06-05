@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Data files (large, should be downloaded separately)
+data/enterprise-attack.json
+data/entities.db
+
+# OS
+.DS_Store
+Thumbs.db
