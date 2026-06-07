@@ -53,9 +53,14 @@ class QAEngine:
         print("正在初始化 BM25 检索引擎...")
         self.bm25 = BM25Search()
         if not self.bm25.load_index(bm25_index_path):
-            print("索引不存在，正在构建...")
-            self.bm25.build_index(stix_data_path)
-            self.bm25.save_index(bm25_index_path)
+            if os.path.exists(stix_data_path):
+                print("索引不存在，正在从原始数据构建...")
+                self.bm25.build_index(stix_data_path)
+                self.bm25.save_index(bm25_index_path)
+            else:
+                raise FileNotFoundError(
+                    f"BM25 索引文件和原始数据文件均不存在: {bm25_index_path}, {stix_data_path}"
+                )
 
         # 初始化 Neo4j 图查询
         print("正在连接 Neo4j...")
