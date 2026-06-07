@@ -20,7 +20,6 @@ venv/
 # Data files (large, should be downloaded separately)
 data/enterprise-attack.json
 data/entities.db
-data/bm25_index.pkl
 
 # Environment variables
 .env
