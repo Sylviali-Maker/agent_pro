@@ -20,6 +20,24 @@ venv/
 # Data files (large, should be downloaded separately)
 data/enterprise-attack.json
 data/entities.db
+data/bm25_index.pkl
+
+# Environment variables
+.env
+
+# 生成的图片和图表
+*.png
+*.svg
+pipeline_flow
+
+# 测试脚本
+test_*.py
+
+# 图表生成工具脚本
+generate_flow_diagram.py
+
+# pip 错误生成的文件
+=*
 
 # OS
 .DS_Store
